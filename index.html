@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Encore | Share what remains</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<header class="hero">
+		<nav class="site-nav" aria-label="Main navigation">
+			<a class="brand" href="#top" aria-label="Encore home">
+				<span class="brand-mark" aria-hidden="true">E</span>
+				<span>Encore</span>
+			</a>
+			<div class="nav-links">
+				<a href="#how-it-works">How It Works</a>
+				<a href="#available-materials">Explore Materials</a>
+				<a href="#list-materials">List Materials</a>
+			</div>
+		</nav>
+		<div class="hero-content" id="top">
+			<div class="hero-stickers" aria-label="Made for campus, less waste more future">
+				<span class="sticker sticker-lime">Less waste, more future</span>
+				<span class="sticker sticker-paper">Made for campus</span>
+			</div>
+			<p class="eyebrow hero-eyebrow">Campus events, with a second life</p>
+			<h1>Encore</h1>
+			<h2>One fest ends.<br>The next begins.</h2>
+			<p class="hero-tagline">One event's leftovers. Another event's essentials.</p>
+			<p class="description">
+				Student societies can list, discover, and reserve reusable event materials,
+				so great props and decorations get another moment in the spotlight.
+			</p>
+			<a class="button hero-button" href="#available-materials">Explore Materials <span aria-hidden="true">&rarr;</span></a>
+		</div>
+	</header>
+
+	<main>
+		<section class="how-section" id="how-it-works" aria-labelledby="how-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">A little less waste, a lot more encore</p>
+					<h2 id="how-title">From one fest to the next.</h2>
+				</div>
+				<p class="section-aside">Three simple steps to keep the good stuff in circulation on campus.</p>
+			</div>
+			<div class="steps-grid">
+				<article class="step-item">
+					<span class="step-icon icon-lime" aria-hidden="true">&#8599;</span>
+					<span class="step-number">Step 01</span>
+					<h3>List leftovers</h3>
+					<p>Share decorations, props, and event materials your society no longer needs.</p>
+				</article>
+				<article class="step-item">
+					<span class="step-icon icon-terracotta" aria-hidden="true"><span class="search-icon"></span></span>
+					<span class="step-number">Step 02</span>
+					<h3>Discover materials</h3>
+					<p>Browse useful finds from other campus societies planning their next event.</p>
+				</article>
+				<article class="step-item">
+					<span class="step-icon icon-lime" aria-hidden="true">&#8635;</span>
+					<span class="step-number">Step 03</span>
+					<h3>Reserve and reuse</h3>
+					<p>Reserve what you need and give it a new life at your next celebration.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="categories-section" aria-labelledby="categories-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Made for the next big idea</p>
+					<h2 id="categories-title">What are you looking for?</h2>
+				</div>
+				<a class="text-link" href="#available-materials">Browse available materials <span aria-hidden="true">&rarr;</span></a>
+			</div>
+			<div class="category-grid">
+				<article class="category-card category-decorations">
+					<span class="category-icon" aria-hidden="true">&#10022;</span>
+					<h3>Decorations</h3>
+					<p>Bunting, lights, table details, and the little touches that set the scene.</p>
+					<button class="category-filter" type="button" data-material-filter="Decorations" aria-pressed="false">Show Decorations <span aria-hidden="true">&rarr;</span></button>
+				</article>
+				<article class="category-card category-cardboard">
+					<span class="category-icon" aria-hidden="true">&#9638;</span>
+					<h3>Cardboard &amp; Props</h3>
+					<p>Sturdy builds and creative props ready for their next campus moment.</p>
+					<button class="category-filter" type="button" data-material-filter="Cardboard &amp; Props" aria-pressed="false">Show Cardboard &amp; Props <span aria-hidden="true">&rarr;</span></button>
+				</article>
+				<article class="category-card category-boards">
+					<span class="category-icon" aria-hidden="true">&#9635;</span>
+					<h3>Display Boards</h3>
+					<p>Boards and stands for showcases, sign-ups, and society events.</p>
+					<button class="category-filter" type="button" data-material-filter="Display Boards" aria-pressed="false">Show Display Boards <span aria-hidden="true">&rarr;</span></button>
+				</article>
+				<article class="category-card category-other">
+					<span class="category-icon" aria-hidden="true">&#8635;</span>
+					<h3>Other Reusable Materials</h3>
+					<p>Useful event extras that deserve another outing, not a storage box.</p>
+					<button class="category-filter" type="button" data-material-filter="Other" aria-pressed="false">Show Other Materials <span aria-hidden="true">&rarr;</span></button>
+				</article>
+			</div>
+		</section>
+
+		<section class="materials-section" id="available-materials" aria-labelledby="materials-title">
+			<div class="section-heading materials-heading">
+				<div>
+					<p class="eyebrow">Find your next-event essentials</p>
+					<h2 id="materials-title">Available Materials</h2>
+				</div>
+				<div class="materials-actions">
+					<button id="all-materials-filter" class="all-materials-filter" type="button" data-material-filter="all" aria-pressed="true">All Materials</button>
+					<a class="text-link" href="#list-materials">Have something to share? <span aria-hidden="true">&rarr;</span></a>
+				</div>
+			</div>
+			<div id="materials-list" class="materials-list" aria-live="polite">
+				<p id="empty-message" class="empty-message">No materials listed yet.</p>
+			</div>
+		</section>
+
+		<section class="listing-section" id="list-materials" aria-labelledby="listing-title">
+			<div class="form-intro">
+				<p class="eyebrow">Pass the good stuff on</p>
+				<h2 id="listing-title">List leftover materials</h2>
+				<p>Tell campus what you have. Someone else's next big idea might need it.</p>
+			</div>
+			<form id="listing-form" novalidate>
+				<div class="form-grid">
+					<div class="form-field">
+						<label for="item-name">Item name</label>
+						<input id="item-name" name="item-name" type="text" required>
+					</div>
+					<div class="form-field">
+						<label for="category">Category</label>
+						<select id="category" name="category" required>
+							<option value="">Choose a category</option>
+							<option>Decorations</option>
+							<option>Cardboard &amp; Props</option>
+							<option>Display Boards</option>
+							<option>Other</option>
+						</select>
+					</div>
+					<div class="form-field">
+						<label for="quantity">Quantity</label>
+						<input id="quantity" name="quantity" type="number" min="1" step="1" required>
+					</div>
+					<div class="form-field">
+						<label for="condition">Condition</label>
+						<select id="condition" name="condition" required>
+							<option value="">Choose a condition</option>
+							<option>Like New</option>
+							<option>Good</option>
+							<option>Usable</option>
+						</select>
+					</div>
+					<div class="form-field">
+						<label for="society-name">Society name</label>
+						<input id="society-name" name="society-name" type="text" required>
+					</div>
+				</div>
+				<button class="button" type="submit">Add Listing</button>
+				<p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+			</form>
+		</section>
+	</main>
+</body>
+</html>
